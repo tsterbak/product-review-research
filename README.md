@@ -5,6 +5,12 @@ Developed with PromptMage: https://promptmage.io
 
 ![Product Review Research](https://github.com/tsterbak/product-review-research/blob/main/assets/screenshot.png)
 
+## Features
+
+- Search for a product and get an in-depth analysis of the product based on trustworthy online reviews
+- Highlights of positive and negative aspects of the product
+- Provides sources for extracted information
+
 ## Getting Started
 
 ### Prerequisites
