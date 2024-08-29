@@ -3,7 +3,7 @@ An AI webapp build with promptmage to provide in-depth analysis for products by 
 
 Developed with PromptMage: https://promptmage.io
 
-![Product Review Research](https://github.com/tsterbak/product-review-research/blob/main/assets/product-review-research.png)
+![Product Review Research](https://github.com/tsterbak/product-review-research/blob/main/assets/screenshot.png)
 
 ## Getting Started
 
