@@ -3,13 +3,13 @@ An AI webapp build with promptmage to provide in-depth analysis for products by 
 
 Developed with PromptMage: https://promptmage.io
 
-![Product Review Research](https://github.com/tsterbak/product-review-research/blob/main/images/product-review-research.png)
+![Product Review Research](https://github.com/tsterbak/product-review-research/blob/main/assets/product-review-research.png)
 
 ## Getting Started
 
 ### Prerequisites
 
-- Python 3.11 or higher
+- Docker and docker-compose installed on your machine
 
 ### Installation
 
@@ -18,29 +18,27 @@ Developed with PromptMage: https://promptmage.io
    git clone
    ```
 
-2. Install poetry
+2. Add .env file to the root of the project and to src/
     ```sh
-    curl -sSL https://install.python-poetry.org | python3 -
+    # src/.env
+    OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     ```
-    Source: https://python-poetry.org/docs/#installing-with-the-official-installer
-
-3. Install dependencies
     ```sh
-    poetry install
-    ```
-    and add the required OpenAI API key to the .env file.
-
-4. Run the app with promptmage
-    ```sh
-    poetry run promptmage run src/app.py
+    # .env
+    OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     ```
 
-5. Open the app frontend in your browser
+2. Build the docker images and start the containers
     ```sh
-    html/index.html
+    docker-compose up --build
     ```
 
-6. Work with the promptmage gui
+3. Open the app frontend in your browser
+    ```sh
+    http://localhost:8080/
+    ```
+
+4. Work with the promptmage gui
     ```sh
     http://localhost:8000/gui/
     ```
