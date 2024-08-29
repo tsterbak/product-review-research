@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  python-api:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app
+    depends_on:
+      - html-server
+
+  html-server:
+    image: nginx:alpine
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+    ports:
+      - "8080:80"

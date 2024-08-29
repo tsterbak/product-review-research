@@ -1,6 +1,10 @@
 # product-review-research
 An AI webapp build with promptmage to provide in-depth analysis for products by researching trustworthy online reviews.
 
+Developed with PromptMage: https://promptmage.io
+
+![Product Review Research](https://github.com/tsterbak/product-review-research/blob/main/images/product-review-research.png)
+
 ## Getting Started
 
 ### Prerequisites
@@ -24,6 +28,7 @@ An AI webapp build with promptmage to provide in-depth analysis for products by 
     ```sh
     poetry install
     ```
+    and add the required OpenAI API key to the .env file.
 
 4. Run the app with promptmage
     ```sh
@@ -32,7 +37,7 @@ An AI webapp build with promptmage to provide in-depth analysis for products by 
 
 5. Open the app frontend in your browser
     ```sh
-    index.html
+    html/index.html
     ```
 
 6. Work with the promptmage gui
