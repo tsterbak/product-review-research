@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "product-review-research"
+version = "0.1.0"
+description = ""
+authors = ["Tobias Sterbak <github@tobiassterbak.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+promptmage = "^0.1.2"
+openai = "^1.42.0"
+python-dotenv = "^1.0.1"
+youtube-transcript-api = "^0.6.2"
+duckduckgo-search = "^6.2.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
