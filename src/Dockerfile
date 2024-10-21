@@ -31,4 +31,4 @@ COPY .env .env
 EXPOSE 8000
 
 # Run the application
-CMD ["poetry", "run", "promptmage", "run", "app.py"]
+CMD ["poetry", "run", "promptmage", "run", "app.py", "--host", "0.0.0.0", "--port", "8000"]

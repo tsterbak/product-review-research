@@ -19,6 +19,7 @@ mage = PromptMage(
     name="product-review-research",
     available_models=["gpt-4o", "gpt-4o-mini", "gpt-4-turbo", "gpt-4"],
 )
+
 # mage.prompt_store.store_prompt(
 #     Prompt(
 #         name="extract_facts",
@@ -52,7 +53,7 @@ def search_product_reviews(product_name: str) -> str:
     youtube_results = DDGS().videos(
         f"reviews of {product_name}",
         safesearch="off",
-        max_results=5,
+        max_results=0,
     )
     return [
         MageResult(
