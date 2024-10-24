@@ -48,12 +48,14 @@ def search_product_reviews(product_name: str) -> str:
     results = DDGS().text(
         f"reviews of {product_name}",
         safesearch="off",
+        timelimit="y",
         max_results=5,
     )
     youtube_results = DDGS().videos(
         f"reviews of {product_name}",
         safesearch="off",
-        max_results=0,
+        timelimit="y",
+        max_results=5,
     )
     return [
         MageResult(
@@ -79,7 +81,9 @@ def get_transcript(video_id: str) -> str:
     Uses the YouTube API to get the transcript of a video with youtube-transcript-api.
     """
     try:
-        transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=["en"])
+        transcript = YouTubeTranscriptApi.get_transcript(
+            video_id, languages=["en", "de"]
+        )
         transcript_text = TextFormatter().format_transcript(transcript)
     except Exception as e:
         transcript_text = f"Error: {str(e)}"
